@@ -63,6 +63,7 @@ class DesktopClockApp:
         self.root.bind("<Button-3>", self.show_menu)
 
         # 画像初期設定
+        # image.pngが同じディレクトリに無ければ黒塗り背景のまま
         initial_bg_image_path = "image.png"
         if os.path.isfile(initial_bg_image_path):
             self.load_background(initial_bg_image_path)
