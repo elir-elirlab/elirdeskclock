@@ -68,6 +68,9 @@ class DesktopClockApp:
         if os.path.isfile(initial_bg_image_path):
             self.load_background(initial_bg_image_path)
 
+        # ここが追加された行（ダブルクリックで終了）
+        self.root.bind("<Double-Button-1>", lambda event: self.root.destroy())
+
         self.update_time() # 初回更新
 
     def toggle_fullscreen(self, event=None):
